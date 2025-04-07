@@ -4,8 +4,6 @@ import os
 from flask import Flask, render_template, request, send_from_directory
 from pydub import AudioSegment
 from werkzeug.utils import secure_filename
-from pydub.utils import which
-AudioSegment.converter = which("ffmpeg") or "./bin/ffmpeg"
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
